@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" 
+        rel="stylesheet"> 
+    <link 
+        rel="stylesheet" 
+        href="styles.css">
+    <title>404-page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>404 Page Not Found</h2>
+        <main class="container">
+            <section>
+                <img id="image" class="image" src="assets/Scarecrow.png" alt ="Scarecrow404" />
+            </section>
+            <section>
+                <h1 class="headline">
+                    I have bad news for you...
+                </h1>
+                <p class="content">
+                    the page you are looking 
+                </br>
+                    for might be removed or is 
+                </br>
+                temporarily unavailable
+                </p>
+                <button class="spin-btn" onclick="goHome()">Back To Homepage</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <a class="content" href="https://github.com/demkantor" target="__blank">&copy; demkantor</a>
+        </footer>
+    </div>
+    <script>
+        function goHome() {
+            const pic = document.getElementById("image");
+            if(pic.classList.contains('rotate')){
+                pic.classList.remove('rotate');
+                pic.src = "assets/Scarecrow.png"; 
+            } else {
+                pic.classList.add('rotate');
+                setTimeout(function(){ 
+                    pic.src = "assets/home.svg"; 
+                }, 1800);
+            }
+        };
+    </script>
+</body>
+</html>

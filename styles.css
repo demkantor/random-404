@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Ranchers&display=swap');
+
+:root {
+    --text-primary: #0c0c0c;
+    --bg-primary: #dddddd;
+    --bg-secondary: #ffffff;
+    --transition-speed: 600ms ease all;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-primary);
+    box-sizing: border-box;
+    font-family: 'Ranchers', cursive;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+}
+
+.wrapper {
+    background: var(--bg-secondary);
+    margin: 2vh 2vw;
+    height: 96vh;
+    width: 96vw;
+    border-radius: 1em;
+    display: grid;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
+    grid-auto-rows: minmax(25em, auto);
+    grid-gap: 1em;
+    margin: auto;
+}
+
+.image {
+    width: 100%;
+}
+
+.rotate {
+    -webkit-animation: rotate 4000ms infinite;
+    -moz-animation:    rotate 4000ms infinite;
+    -o-animation:      rotate 4000ms infinite;
+    animation:         rotate 4000ms infinite;
+}
+
+@keyframes rotate {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+}
+
+.headline {
+    margin-top: 2em;
+    font-size: xx-large;
+    font-weight: 900;
+}
+
+.content {
+    font-family: 'Comfortaa', cursive;
+}
+
+.spin-btn {
+    margin-top: 1em;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    padding: .8em;
+    border-radius: 3em;
+    transition: var(--transition-speed);
+}
+
+.spin-btn:hover {
+    filter: sepia(1);
+    transform: scale(1.1);
+    transition: var(--transition-speed);
+  }
+
+.footer {
+    margin: 2em;
+}
